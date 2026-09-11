@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio | Desarrollador Web</title>
+  
+  <!-- Fuente Google Font: Poppins para un diseño moderno -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+
+  <!-- Elementos de fondo decorativos -->
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+
+  <!-- Navegación -->
+  <header>
+    <div class="navbar">
+      <a href="#" class="logo">Mi Portafolio</a>
+      
+      <div class="nav-right">
+        <button id="theme-btn" class="theme-btn" title="Cambiar tema">🌙</button>
+        <button id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</button>
+      </div>
+
+      <nav id="nav-menu">
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact" class="btn-nav">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero / Sobre mí -->
+    <section id="about" class="hero">
+      <div class="hero-info">
+        <span class="badge">👋 Bienvenido a mi espacio</span>
+        <h1>Hola, soy <span class="highlight">Evan Steve</span></h1>
+        <h2>Desarrollador de Software</h2>
+        <p class="bio">
+            Soy un Joven apacionado por la tecnología y el desarrollo web. Me especializo en crear soluciones digitales que combinan diseño, funcionalidad y rendimiento. Construyo experiencias digitales atractivas, funcionales y optimizadas. Me gusta el diseño interactivo y el código de calidad.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Ver Proyectos ✨</a>
+          <a href="#contact" class="btn btn-secondary">Escríbeme</a>
+        </div>
+      </div>
+      
+      <div class="hero-img-container">
+        <div class="img-border-glow"></div>
+        <img src="./assets/Img/perfill.jpeg" alt="Foto de perfil" class="hero-img">
+      </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="skills" class="section">
+      <div class="section-title">
+        <h2>Mis Habilidades</h2>
+        <p>Tecnologías que utilizo para dar vida a las ideas.</p>
+      </div>
+
+      <div class="skills-container">
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">HTML & CSS3</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Integración de contenidos digitales</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="section">
+      <div class="section-title">
+        <h2>Proyectos Destacados</h2>
+        <p>Una selección de mis trabajos más recientes e interactivos.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filtrarProyectos('todos')">Todos</button>
+        <button class="filter-btn" onclick="filtrarProyectos('frontend')">Frontend</button>
+        <button class="filter-btn" onclick="filtrarProyectos('fullstack')">Fullstack</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="fullstack">
+          <div class="card-img-wrapper">
+            <img src="./assets/img/Coll-Dep.jpeg" alt="Tienda Deportiva">
+          </div>
+          <div class="card-content">
+            <h3>Tienda Deportiva</h3>
+            <p>Aplicación web funcional de comercio electrónico para artículos deportivos. Incluye la experiencia completa del usuario desde la navegación de productos con filtros avanzados hasta una pasarela de pago segura y confirmación de pedido automatizada.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card" data-category="frontend">
+          <div class="card-img-wrapper">
+            <img src="./assets/img/Front.png" alt="Frontend">
+          </div>
+          <div class="card-content">
+            <h3>The Rock Burguer</h3>
+            <p>Desarrollo de la interfaz de usuario para una plataforma de gestión de comida rápida, implementando un sistema interactivo de personalización de menús y pantallas dinámicas para el seguimiento de pedidos en tiempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->   
+
+      <section id="contact" class="section">
+  <div class="section-title">
+    <h2>¡Hablemos!</h2>
+    <p>¿Tienes una idea o proyecto en mente? Envíame un mensaje.</p>
+  </div>
+
+  <form action="https://formspree.io/f/xeaqnlqn" method="POST" id="contact-form" class="glass-form">
+    <div class="input-group">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre acá">
+      <small class="error-text" id="err-nombre"></small>
+    </div>
+
+    <div class="input-group">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+      <small class="error-text" id="err-correo"></small>
+    </div>
+
+    <div class="input-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu propuesta o consulta..."></textarea>
+      <small class="error-text" id="err-mensaje"></small>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje 📩</button>
+    <div id="form-msg" class="form-feedback"></div>
+  </form>
+</section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Diseñado Por Evan Steve desarrollador de Software.</p>
+    <div class="social-links">
+      <a href="https://github.com/Evansteve08" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/evansteve008/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
