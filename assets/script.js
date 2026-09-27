@@ -132,3 +132,41 @@ form.addEventListener('submit', (e) => {
   }
   // Si todo es válido, NO ejecutamos e.preventDefault(), permitiendo que los datos se envíen a Formspree
 });
+// Inicializar Google Translate de forma invisible
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'es',
+    includedLanguages: 'en,es',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
+// Cargar el script de Google
+(function() {
+  var script = document.createElement('script');
+  script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  document.body.appendChild(script);
+})();
+
+// Controlar la traducción con tu botón personalizado
+let esIngles = false;
+
+document.getElementById('btn-traductor')?.addEventListener('click', function() {
+  const select = document.querySelector('.goog-te-combo');
+  const btn = document.getElementById('btn-traductor');
+
+  if (select) {
+    if (!esIngles) {
+      select.value = 'en'; // Cambia a inglés
+      btn.innerText = '🌐 ES';
+      esIngles = true;
+    } else {
+      select.value = 'es'; // Cambia a español
+      btn.innerText = '🌐 EN';
+      esIngles = false;
+    }
+    
+    // Dispara el evento de cambio para traducir
+    select.dispatchEvent(new Event('change'));
+  }
+});

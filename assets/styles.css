@@ -598,4 +598,134 @@ footer {
   #nav-menu.show {
     display: flex;
   }
+  
+}/* Ocultar la barra superior y elementos de Google Translate */
+.goog-te-banner-frame, 
+.goog-te-balloon-frame,
+#goog-gt-tt, 
+.goog-te-spinner-pos {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Estilo para tu botón limpio */
+.lang-btn {
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  color: inherit;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.lang-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+/* Ocultar cualquier elemento o iframe inyectado por Google Translate */
+body > .skiptranslate,
+iframe.skiptranslate,
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-spinner-pos,
+.goog-text-highlight {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Evitar que Google empuje la página hacia abajo */
+body {
+  top: 0px !important;
+  position: static !important;
+}/* Contenedor de acciones dentro de la tarjeta */
+.card-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo para el botón de GitHub */
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.btn-github:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+/* Grid de Tecnologías */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto 0 auto;
+}
+
+/* Tarjeta individual interactiva */
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-icon {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* Efecto interactivo al pasar el mouse (Hover) */
+.tech-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-card:hover .tech-icon {
+  transform: scale(1.15);
 }
