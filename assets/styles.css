@@ -729,3 +729,51 @@ body {
 .tech-card:hover .tech-icon {
   transform: scale(1.15);
 }
+
+/* ==========================================
+   Ajustes para Pantallas Grandes (PC / Laptop)
+   ========================================== */
+@media (min-width: 768px) {
+  
+  /* 1. Ajuste de la Sección Hero (Sobre mí) */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .hero-info {
+    max-width: 50%;
+  }
+
+  .hero-img-container {
+    max-width: 40%;
+  }
+
+  /* 2. Grid de Habilidades */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* 3. Grid de Proyectos */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+
+  /* 4. Grid de Tecnologías */
+  .tech-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* 5. Formulario de contacto centrado */
+  .glass-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
