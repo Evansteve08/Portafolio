@@ -783,4 +783,64 @@ body {
     max-width: 1200px !important;
     margin: 0 auto !important;
   }
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-actions {
+  margin-top: 18px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+/* Estilo para el botón Ver Demo (TV) */
+.btn-demo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 14px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #6366f1, #4f46e5) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+  transition: all 0.2s ease !important;
+  margin: 0 !important;
+}
+
+.btn-demo:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.5) !important;
+  opacity: 0.95 !important;
+}
+
+/* Estilo para el botón Ver Código (GitHub) */
+.btn-github {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 14px !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(5px) !important;
+  transition: all 0.2s ease !important;
+  margin: 0 !important;
+}
+
+.btn-github:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
 }
